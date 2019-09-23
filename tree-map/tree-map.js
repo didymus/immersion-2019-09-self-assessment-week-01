@@ -34,7 +34,15 @@ const Tree = function(value) {
 };
 
 Tree.prototype.map = function(){
-  
+
+};
+
+//create addChild function
+Tree.prototype.addChild = function(value){
+//define newChild
+let newChild = Tree(value);
+//push newChild into children array
+this.children.push(newChild);
 };
 
 window.Tree = Tree;
