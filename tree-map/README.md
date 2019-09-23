@@ -1,7 +1,7 @@
 ## Tree Map
 
-- [ ] Create an `index.html` file
-- [ ] Add a `script` tag to run your `tree-map.js`
+- [Complete] Create an `index.html` file
+- [Complete] Add a `script` tag to run your `tree-map.js`
 - [ ] Open the `index.html` in Chrome
 - [ ] Implement a higher order function, `map`, on the given `Tree` class using pseudoclassical instantiation
 - [ ] Test your implementation using the included example.
