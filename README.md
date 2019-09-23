@@ -27,7 +27,7 @@ After you complete each prompt, assign a grade to each item in the Grading Outli
 
 ### Grading Outline
 
-- [ ] tree-map
+- [Complete] tree-map
 
 
 ### Grading Scale
