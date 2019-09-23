@@ -33,16 +33,32 @@ const Tree = function(value) {
   this.children = [];
 };
 
-Tree.prototype.map = function(){
-
+Tree.prototype.map = function(callback){
+//make new instance of tree
+let node = Array.from(arguments)[1] || new Tree(callback(this.value));
+  //loop over child array
+  this.children.forEach((tree, i) => {
+    //call addChild on new tree
+    node.addChild(callback(tree.value));
+    //check length
+    if(tree.children.length){
+      //use map on new tree instance -> adds to all children
+      tree.map(callback, node.children[i]);
+    };
+})
+//return new tree
+return node;
 };
 
 //create addChild function
 Tree.prototype.addChild = function(value){
-//define newChild
-let newChild = Tree(value);
-//push newChild into children array
-this.children.push(newChild);
+//define newChild / node
+let node = new Tree(value);
+//push newChild / node into children array
+this.children.push(node);
+//return newChild / node
+return node;
+
 };
 
 window.Tree = Tree;
