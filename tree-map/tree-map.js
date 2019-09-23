@@ -33,5 +33,8 @@ const Tree = function(value) {
   this.children = [];
 };
 
+Tree.prototype.map = function(){
+  
+};
 
 window.Tree = Tree;
